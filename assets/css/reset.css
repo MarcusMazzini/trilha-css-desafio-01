@@ -1,0 +1,11 @@
+/* configurações globais para "resetar" estilos padrão dos navegadores */
+
+/* importa a fonte Raleway do Google Fonts  */
+/* O parâmetro display=swap garante que, caso a fonte ainda não tenha sido carregada, o texto será mostrado com uma fonte padrão temporária e trocado assim que a Raleway estiver disponível. */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap");
+
+* {
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}

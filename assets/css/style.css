@@ -1,3 +1,192 @@
-h1 {
-  background-color: green;
+/*Esta linha importa um arquivo CSS chamado 'reset.css', usado para remover ou padronizar estilos padrão que os navegadores aplicam, garantindo uma base consistente para o design.*/
+@import url("reset.css");
+
+/* Aqui definimos as propriedades básicas para todo o conteúdo do corpo da página. */
+body {
+  background-color: black;
+}
+
+/* Estilos para Títulos de Seção (h2)*/
+h2 {
+  font-size: 2rem;
+  color: #33a8db;
+  font-weight: bold;
+  letter-spacing: 4px;
+  /* Transforma todo o texto em letras maiúsculas. */
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+/*  Estilos para Parágrafos (p) Define a cor dos parágrafos como branco para melhor legibilidade */
+p {
+  color: white;
+}
+
+/*  Estilos para Seções Genéricas que são aplicadas a todos os elementos <section>.*/
+section {
+  margin: 100px auto;
+}
+
+/*  Estilos da Seção de Banner Principal. Esta classe '.banner' define o visual da seção principal,*/
+.banner {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(49, 168, 221, 0.2),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../images/banner.png");
+  /* Garante que a imagem de fundo cubra toda a área do elemento. */
+  background-size: cover;
+  /* Evita que a imagem de fundo se repita. */
+  background-repeat: no-repeat;
+  height: 600px;
+  padding-top: 60px;
+  border-bottom: 1px solid #33a8db80;
+}
+
+/* Estilos para o Conteúdo Interno do Banner. Centraliza e ajusta a largura do conteúdo dentro do banner. */
+.banner .banner-content {
+  color: white;
+  width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Estilos para o Título Principal do Banner (h1) Define o estilo para o título h1 dentro do banner, com um gradiente de cor.*/
+.banner h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: transparent;
+  background: -webkit-linear-gradient(#33a8db, #1472b7);
+  background-clip: text;
+  /* Propriedade para navegadores baseados em WebKit (Chrome, Safari). */
+  -webkit-background-clip: text;
+}
+
+/*Estilos para Parágrafos dentro do Banner. Ajusta o tamanho da fonte e as margens para os parágrafos no banner.*/
+.banner p {
+  font-size: 1.25rem;
+  margin: 16px 0 24px;
+}
+
+/*  Estilos para o Logo dentro do Banner Define o visual do elemento que contém o logo no banner.*/
+.banner .logo {
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 260px;
+  width: 260px;
+  margin: auto;
+  border-radius: 50%;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+/*Estilos para a Imagem dentro do Logo do Banner. Garante que a imagem do logo se ajuste corretamente ao seu contêiner.*/
+.banner .logo img {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  /* Redimensiona a imagem para caber dentro do seu contêiner, mantendo a proporção. */
+  object-fit: contain;
+}
+
+/* Estilos para o Botão dentro do Banner. Define o visual do botão de chamada para ação no banner.*/
+.banner .banner-content button {
+  color: #31a8dd;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 16px 32px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  background-color: transparent;
+  border-image: linear-gradient(#3ba1cd, #1572b7);
+  border-image-slice: 10;
+  border-radius: 30px;
+}
+
+/*Estilos para a Seção de Conteúdo do Curso (#course-content). Define as propriedades para a seção que lista o conteúdo do curso.*/
+#course-content {
+  width: 800px;
+  text-align: center;
+}
+
+/* Estilos para a Lista de Módulos dentro do Conteúdo do Curso. Aplica margens à lista de módulos */
+#course-content .modules-list {
+  margin: 24px 0;
+}
+
+/* Estilos para Módulos Individuais na Lista de Módulos. Define o visual de cada módulo listado */
+#course-content .modules-list .module {
+  color: white;
+  width: 530px;
+  margin: 0 auto 24px;
+  border: 1px solid #33a8db;
+  background-color: #252525;
+  padding: 16px;
+  border-radius: 100px;
+  box-shadow: inset -5px 6px 8px rgba(0, 0, 0, 0.7);
+}
+
+/*Estilos para Spans dentro de Módulos Individuais. Aplica uma cor azul aos elementos <span> dentro dos módulos*/
+#course-content .modules-list .module span {
+  color: #33a8db;
+}
+
+/*Estilos para a Seção "Transformar o Mundo" (#transform-world). Esta seção possui uma imagem de fundo fixa e propriedades de layout.*/
+#transform-world {
+  height: 560px;
+  background-size: cover;
+  background-image: url("../images/woman-code.png");
+  /* Fixa a imagem de fundo em relação à viewport, criando um efeito parallax. */
+  background-attachment: fixed;
+  /* Borda superior e inferior: 1px sólida, com cor azul semi-transparente. */
+  border-top: 1px solid #33a8db80;
+  border-bottom: 1px solid #33a8db80;
+  /* Preenchimento interno de 200px em todos os lados. */
+  padding: 200px;
+}
+
+/* Estilos para Parágrafos dentro da Seção "Transformar o Mundo". Formata o texto do parágrafo nesta seção.*/
+#transform-world p {
+  font-weight: 900;
+  font-size: 2.5rem;
+
+  text-transform: lowercase;
+  max-width: 250px;
+  text-shadow: 3px 2px #33a8db;
+}
+
+/* Estilos para a Seção "Desafios Profissionais" (#professional-challenges). Define a largura e alinhamento para a seção de desafios.*/
+#professional-challenges {
+  text-align: center;
+  width: 800px;
+}
+
+/*Estilos para Imagens dentro da Seção "Desafios Profissionais". Adiciona margens para as imagens nesta seção*/
+#professional-challenges img {
+  margin: 32px 0;
+}
+
+/*Estilos para o Rodapé (footer). Define o visual do rodapé da página.*/
+footer {
+  padding: 60px 0;
+  text-align: center;
+  /* Define um gradiente linear como imagem de fundo.O gradiente vai de um azul claro muito transparente para um azul claro menos transparente.*/
+  background-image: linear-gradient(
+    rgba(50, 168, 219, 0),
+    rgba(50, 168, 219, 0.2)
+  );
+  border-top: 1px solid #33a8db80;
+}
+
+/*Estilos para o Logo da DIO dentro do Rodapé*/
+footer .dio-logo {
+  width: 300px;
+}
+
+/*Estilos para Links dentro do Rodapé (footer a)*/
+footer a {
+  color: #33a8db;
+  font-weight: bold;
+  text-decoration: none;
 }
